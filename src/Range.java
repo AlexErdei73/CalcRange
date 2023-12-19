@@ -4,6 +4,14 @@ public class Range {
     private double speed;
     private double angleInDegrees;
     private double range;
+    Range(double speed) {
+        double angle = 0;
+        while (angle <= 90) {
+            this.calc(speed, angle);
+            this.showRange();
+            angle += 5;
+        }
+    }
     public void calc(double speed, double angle) {
         this.speed = speed;
         this.angleInDegrees = angle;
