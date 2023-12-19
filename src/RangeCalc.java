@@ -13,9 +13,12 @@ public class RangeCalc {
     }
     public static void main(String[] args) {
         double speed = inputParam(args, 0, 20);
-        double angleInDegrees = inputParam(args, 1, 45);
+        double angle = 0; /* inputParam(args, 1, 45); */
         Range range = new Range();
-        range.calc(speed, angleInDegrees);
-        range.showRange();
+        while (angle <= 90) {
+            range.calc(speed, angle);
+            range.showRange();
+            angle += 5;
+        }
     }
 }
