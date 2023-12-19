@@ -13,7 +13,6 @@ public class RangeCalc {
     }
     public static void main(String[] args) {
         double speed = inputParam(args, 0, 20);
-        double angle = 0; /* inputParam(args, 1, 45); */
-        Range range = new Range(speed);
+        new Range(speed);
     }
 }
